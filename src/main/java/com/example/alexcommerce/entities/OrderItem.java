@@ -3,7 +3,7 @@ package com.example.alexcommerce.entities;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 
-@Entity
+@Entity(name = "tb_order_item")
 public class OrderItem {
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
