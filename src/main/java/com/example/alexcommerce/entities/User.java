@@ -14,7 +14,10 @@ public class User {
     private Long id;
 
     private String name;
+    @Column(unique = true)
     private String email;
+    
+    @Column(unique = true)
     private String phone;
     private LocalDate birthDate;
     private String password;
@@ -25,13 +28,14 @@ public class User {
 
     public User() {}
 
-    public User(String name, String email, String phone, LocalDate birthDate, String password, String[] roles) {
+    public User(String name, String email, String phone, LocalDate birthDate, String password, String[] roles, List<Order> orders) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.birthDate = birthDate;
         this.password = password;
         this.roles = roles;
+        this.orders = orders;
     }
 
     public Long getId() {
